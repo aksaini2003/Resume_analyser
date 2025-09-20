@@ -3,6 +3,7 @@ import fitz
 import io
 from backend import resume_analyzer 
 try:
+    
     # -------------------- PDF Extractor --------------------
     def extract_text(uploaded_file):
         file_bytes = uploaded_file.read()

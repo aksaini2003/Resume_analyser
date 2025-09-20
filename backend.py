@@ -8,12 +8,14 @@ from langchain.prompts import PromptTemplate
 import fitz        # PyMuPDF
 # from docx import Document
 from pathlib import Path
+import streamlit as st 
 
 
 load_dotenv()
 
 #let add a llm model in our notebook 
-llm=ChatGroq(model='Llama-3.3-70b-versatile') 
+groq_key = st.secrets["GROQ_API_KEY"]
+llm=ChatGroq(model='Llama-3.3-70b-versatile',api_key=groq_key) 
 
 
 #now lets make our graph
